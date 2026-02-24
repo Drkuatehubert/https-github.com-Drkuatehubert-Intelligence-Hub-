@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+.env
+*.log
+external/
+frontend/node_modules/
+frontend/dist/
+backend/bin/
+backend/vendor/

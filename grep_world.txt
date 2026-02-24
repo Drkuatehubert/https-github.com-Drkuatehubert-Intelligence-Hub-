@@ -1,0 +1,19 @@
+frontend/src/config/gulf-fdi.ts:  // ─── DP WORLD (UAE) ──────────────────────────────────────────────────────
+frontend/src/e2e/mobile-map-integration-harness.ts:const MINIMAL_WORLD_TOPOLOGY = {
+frontend/src/e2e/mobile-map-integration-harness.ts:    return new Response(JSON.stringify(MINIMAL_WORLD_TOPOLOGY), {
+frontend/src/e2e/mobile-map-integration-harness.ts:    mapInternals.worldData = MINIMAL_WORLD_TOPOLOGY;
+frontend/src/components/WorldMonitorTab.ts:const WM_KEY: RuntimeSecretKey = 'WORLDMONITOR_API_KEY';
+frontend/src/components/StatusPanel.ts:const WORLD_FEEDS = new Set([
+frontend/src/components/StatusPanel.ts:const WORLD_APIS = new Set([
+frontend/src/components/StatusPanel.ts:    this.allowedFeeds = SITE_VARIANT === 'tech' ? TECH_FEEDS : WORLD_FEEDS;
+frontend/src/components/StatusPanel.ts:    this.allowedApis = SITE_VARIANT === 'tech' ? TECH_APIS : WORLD_APIS;
+frontend/src/components/InsightsPanel.ts:        <div class="insights-section-title">${SITE_VARIANT === 'tech' ? '🚀 TECH BRIEF' : '🌍 WORLD BRIEF'}</div>
+frontend/src/locales/en.json:    "world": "WORLD",
+frontend/src/locales/en.json:      "worldRank": "WORLD RANK"
+frontend/src/services/runtime-config.ts:  | 'WORLDMONITOR_API_KEY';
+frontend/src/services/runtime-config.ts:  if (key === 'WORLDMONITOR_API_KEY') {
+frontend/src/services/story-renderer.ts:  ctx.fillText('WORLDMONITOR', textX, y + 26);
+frontend/src/services/story-renderer.ts:  ctx.fillText('WORLDMONITOR.APP', footerTextX, H - 55);
+frontend/src/services/runtime.ts:        const wmKeyState = getSecretState('WORLDMONITOR_API_KEY');
+frontend/src/services/runtime.ts:        const wmKeyValue = getRuntimeConfigSnapshot().secrets['WORLDMONITOR_API_KEY']?.value;
+frontend/src/services/analytics.ts:  WORLDMONITOR_API_KEY: 'worldmonitor',

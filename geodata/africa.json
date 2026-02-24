@@ -1,0 +1,15 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {"name": "Nigeria", "code": "NG", "region": "West Africa"},
+			"geometry": {"type": "Point", "coordinates": [8.6753, 9.082]}
+		},
+		{
+			"type": "Feature",
+			"properties": {"name": "South Africa", "code": "ZA", "region": "Southern Africa"},
+			"geometry": {"type": "Point", "coordinates": [22.9375, -30.5595]}
+		}
+	]
+}

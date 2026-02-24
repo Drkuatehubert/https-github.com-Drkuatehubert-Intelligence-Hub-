@@ -1,0 +1,142 @@
+frontend/src/config/variants/finance.ts:const rss = (url: string) => `/api/rss-proxy?url=${encodeURIComponent(url)}`;
+frontend/src/config/variants/tech.ts:const rss = (url: string) => `/api/rss-proxy?url=${encodeURIComponent(url)}`;
+frontend/src/config/variants/tech.ts:    { name: 'CISA Advisories', url: 'https://rss.worldmonitor.app/api/rss-proxy?url=' + encodeURIComponent('https://www.cisa.gov/cybersecurity-advisories/all.xml') },
+frontend/src/config/feeds.ts:const rss = (url: string) => `/api/rss-proxy?url=${encodeURIComponent(url)}`;
+frontend/src/config/feeds.ts:    { name: 'CNA', url: rss('https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml') },
+frontend/src/config/feeds.ts:    { name: 'FwdStart Newsletter', url: '/api/fwdstart' },
+frontend/src/utils/proxy.ts:  return typeof url === 'string' && (url.startsWith('/api/') || url.includes('/api/'));
+frontend/src/components/LiveNewsPanel.ts:    return `/api/youtube/embed?${params.toString()}`;
+frontend/src/components/RuntimeConfigPanel.ts:  FRED_API_KEY: 'https://fred.stlouisfed.org/docs/api/api_key.html',
+frontend/src/components/RuntimeConfigPanel.ts:  NASA_FIRMS_API_KEY: 'https://firms.modaps.eosdis.nasa.gov/api/area/',
+frontend/src/components/RuntimeConfigPanel.ts:      // Try Ollama-native /api/tags first, fall back to OpenAI-compatible /v1/models
+frontend/src/components/RuntimeConfigPanel.ts:        const res = await fetch(new URL('/api/tags', ollamaUrl).toString(), {
+frontend/src/components/WorldMonitorTab.ts:      const res = await fetch(`${base}/api/register-interest`, {
+frontend/src/components/LiveWebcamsPanel.ts:      return `${remoteBase}/api/youtube/embed?${params.toString()}`;
+frontend/src/components/DownloadBanner.ts:    { cls: 'mac', href: '/api/download?platform=macos-arm64', label: `\uF8FF ${t('modals.downloadBanner.macSilicon')}` },
+frontend/src/components/DownloadBanner.ts:    { cls: 'mac', href: '/api/download?platform=macos-x64', label: `\uF8FF ${t('modals.downloadBanner.macIntel')}` },
+frontend/src/components/DownloadBanner.ts:    { cls: 'win', href: '/api/download?platform=windows-exe', label: `\u229E ${t('modals.downloadBanner.windows')}` },
+frontend/src/components/DownloadBanner.ts:    { cls: 'linux', href: '/api/download?platform=linux-appimage', label: `\u{1F427} ${t('modals.downloadBanner.linux')}` },
+frontend/src/main.ts:// In desktop mode, route /api/* calls to the local Tauri sidecar backend.
+frontend/src/App.ts:      const res = await fetch('https://worldmonitor.app/api/version');
+frontend/src/App.ts:        return `https://worldmonitor.app/api/download?platform=${platform}&variant=${variant}`;
+frontend/src/settings-main.ts:      const res = await fetch(`${SIDECAR_BASE}/api/local-debug-toggle`);
+frontend/src/settings-main.ts:      const res = await fetch(`${SIDECAR_BASE}/api/local-debug-toggle`, { method: 'POST' });
+frontend/src/settings-main.ts:      const res = await fetch(`${SIDECAR_BASE}/api/local-traffic-log`);
+frontend/src/settings-main.ts:      await fetch(`${SIDECAR_BASE}/api/local-traffic-log`, { method: 'DELETE' });
+frontend/src/generated/client/worldmonitor/economic/v1/service_client.ts:    let path = "/api/economic/v1/get-fred-series";
+frontend/src/generated/client/worldmonitor/economic/v1/service_client.ts:    let path = "/api/economic/v1/list-world-bank-indicators";
+frontend/src/generated/client/worldmonitor/economic/v1/service_client.ts:    let path = "/api/economic/v1/get-energy-prices";
+frontend/src/generated/client/worldmonitor/economic/v1/service_client.ts:    let path = "/api/economic/v1/get-macro-signals";
+frontend/src/generated/client/worldmonitor/research/v1/service_client.ts:    let path = "/api/research/v1/list-arxiv-papers";
+frontend/src/generated/client/worldmonitor/research/v1/service_client.ts:    let path = "/api/research/v1/list-trending-repos";
+frontend/src/generated/client/worldmonitor/research/v1/service_client.ts:    let path = "/api/research/v1/list-hackernews-items";
+frontend/src/generated/client/worldmonitor/research/v1/service_client.ts:    let path = "/api/research/v1/list-tech-events";
+frontend/src/generated/client/worldmonitor/climate/v1/service_client.ts:    let path = "/api/climate/v1/list-climate-anomalies";
+frontend/src/generated/client/worldmonitor/unrest/v1/service_client.ts:    let path = "/api/unrest/v1/list-unrest-events";
+frontend/src/generated/client/worldmonitor/maritime/v1/service_client.ts:    let path = "/api/maritime/v1/get-vessel-snapshot";
+frontend/src/generated/client/worldmonitor/maritime/v1/service_client.ts:    let path = "/api/maritime/v1/list-navigational-warnings";
+frontend/src/generated/client/worldmonitor/military/v1/service_client.ts:    let path = "/api/military/v1/list-military-flights";
+frontend/src/generated/client/worldmonitor/military/v1/service_client.ts:    let path = "/api/military/v1/get-theater-posture";
+frontend/src/generated/client/worldmonitor/military/v1/service_client.ts:    let path = "/api/military/v1/get-aircraft-details";
+frontend/src/generated/client/worldmonitor/military/v1/service_client.ts:    let path = "/api/military/v1/get-aircraft-details-batch";
+frontend/src/generated/client/worldmonitor/military/v1/service_client.ts:    let path = "/api/military/v1/get-wingbits-status";
+frontend/src/generated/client/worldmonitor/military/v1/service_client.ts:    let path = "/api/military/v1/get-usni-fleet-report";
+frontend/src/generated/client/worldmonitor/prediction/v1/service_client.ts:    let path = "/api/prediction/v1/list-prediction-markets";
+frontend/src/generated/client/worldmonitor/news/v1/service_client.ts:    let path = "/api/news/v1/summarize-article";
+frontend/src/generated/client/worldmonitor/infrastructure/v1/service_client.ts:    let path = "/api/infrastructure/v1/list-internet-outages";
+frontend/src/generated/client/worldmonitor/infrastructure/v1/service_client.ts:    let path = "/api/infrastructure/v1/list-service-statuses";
+frontend/src/generated/client/worldmonitor/infrastructure/v1/service_client.ts:    let path = "/api/infrastructure/v1/get-temporal-baseline";
+frontend/src/generated/client/worldmonitor/infrastructure/v1/service_client.ts:    let path = "/api/infrastructure/v1/record-baseline-snapshot";
+frontend/src/generated/client/worldmonitor/infrastructure/v1/service_client.ts:    let path = "/api/infrastructure/v1/get-cable-health";
+frontend/src/generated/client/worldmonitor/conflict/v1/service_client.ts:    let path = "/api/conflict/v1/list-acled-events";
+frontend/src/generated/client/worldmonitor/conflict/v1/service_client.ts:    let path = "/api/conflict/v1/list-ucdp-events";
+frontend/src/generated/client/worldmonitor/conflict/v1/service_client.ts:    let path = "/api/conflict/v1/get-humanitarian-summary";
+frontend/src/generated/client/worldmonitor/wildfire/v1/service_client.ts:    let path = "/api/wildfire/v1/list-fire-detections";
+frontend/src/generated/client/worldmonitor/market/v1/service_client.ts:    let path = "/api/market/v1/list-market-quotes";
+frontend/src/generated/client/worldmonitor/market/v1/service_client.ts:    let path = "/api/market/v1/list-crypto-quotes";
+frontend/src/generated/client/worldmonitor/market/v1/service_client.ts:    let path = "/api/market/v1/list-commodity-quotes";
+frontend/src/generated/client/worldmonitor/market/v1/service_client.ts:    let path = "/api/market/v1/get-sector-summary";
+frontend/src/generated/client/worldmonitor/market/v1/service_client.ts:    let path = "/api/market/v1/list-stablecoin-markets";
+frontend/src/generated/client/worldmonitor/market/v1/service_client.ts:    let path = "/api/market/v1/list-etf-flows";
+frontend/src/generated/client/worldmonitor/market/v1/service_client.ts:    let path = "/api/market/v1/get-country-stock-index";
+frontend/src/generated/client/worldmonitor/cyber/v1/service_client.ts:    let path = "/api/cyber/v1/list-cyber-threats";
+frontend/src/generated/client/worldmonitor/intelligence/v1/service_client.ts:    let path = "/api/intelligence/v1/get-risk-scores";
+frontend/src/generated/client/worldmonitor/intelligence/v1/service_client.ts:    let path = "/api/intelligence/v1/get-pizzint-status";
+frontend/src/generated/client/worldmonitor/intelligence/v1/service_client.ts:    let path = "/api/intelligence/v1/classify-event";
+frontend/src/generated/client/worldmonitor/intelligence/v1/service_client.ts:    let path = "/api/intelligence/v1/get-country-intel-brief";
+frontend/src/generated/client/worldmonitor/intelligence/v1/service_client.ts:    let path = "/api/intelligence/v1/search-gdelt-documents";
+frontend/src/generated/client/worldmonitor/seismology/v1/service_client.ts:    let path = "/api/seismology/v1/list-earthquakes";
+frontend/src/generated/client/worldmonitor/aviation/v1/service_client.ts:    let path = "/api/aviation/v1/list-airport-delays";
+frontend/src/generated/client/worldmonitor/displacement/v1/service_client.ts:    let path = "/api/displacement/v1/get-displacement-summary";
+frontend/src/generated/client/worldmonitor/displacement/v1/service_client.ts:    let path = "/api/displacement/v1/get-population-exposure";
+frontend/src/generated/server/worldmonitor/economic/v1/service_server.ts:      path: "/api/economic/v1/get-fred-series",
+frontend/src/generated/server/worldmonitor/economic/v1/service_server.ts:      path: "/api/economic/v1/list-world-bank-indicators",
+frontend/src/generated/server/worldmonitor/economic/v1/service_server.ts:      path: "/api/economic/v1/get-energy-prices",
+frontend/src/generated/server/worldmonitor/economic/v1/service_server.ts:      path: "/api/economic/v1/get-macro-signals",
+frontend/src/generated/server/worldmonitor/research/v1/service_server.ts:      path: "/api/research/v1/list-arxiv-papers",
+frontend/src/generated/server/worldmonitor/research/v1/service_server.ts:      path: "/api/research/v1/list-trending-repos",
+frontend/src/generated/server/worldmonitor/research/v1/service_server.ts:      path: "/api/research/v1/list-hackernews-items",
+frontend/src/generated/server/worldmonitor/research/v1/service_server.ts:      path: "/api/research/v1/list-tech-events",
+frontend/src/generated/server/worldmonitor/climate/v1/service_server.ts:      path: "/api/climate/v1/list-climate-anomalies",
+frontend/src/generated/server/worldmonitor/unrest/v1/service_server.ts:      path: "/api/unrest/v1/list-unrest-events",
+frontend/src/generated/server/worldmonitor/maritime/v1/service_server.ts:      path: "/api/maritime/v1/get-vessel-snapshot",
+frontend/src/generated/server/worldmonitor/maritime/v1/service_server.ts:      path: "/api/maritime/v1/list-navigational-warnings",
+frontend/src/generated/server/worldmonitor/military/v1/service_server.ts:      path: "/api/military/v1/list-military-flights",
+frontend/src/generated/server/worldmonitor/military/v1/service_server.ts:      path: "/api/military/v1/get-theater-posture",
+frontend/src/generated/server/worldmonitor/military/v1/service_server.ts:      path: "/api/military/v1/get-aircraft-details",
+frontend/src/generated/server/worldmonitor/military/v1/service_server.ts:      path: "/api/military/v1/get-aircraft-details-batch",
+frontend/src/generated/server/worldmonitor/military/v1/service_server.ts:      path: "/api/military/v1/get-wingbits-status",
+frontend/src/generated/server/worldmonitor/military/v1/service_server.ts:      path: "/api/military/v1/get-usni-fleet-report",
+frontend/src/generated/server/worldmonitor/prediction/v1/service_server.ts:      path: "/api/prediction/v1/list-prediction-markets",
+frontend/src/generated/server/worldmonitor/news/v1/service_server.ts:      path: "/api/news/v1/summarize-article",
+frontend/src/generated/server/worldmonitor/infrastructure/v1/service_server.ts:      path: "/api/infrastructure/v1/list-internet-outages",
+frontend/src/generated/server/worldmonitor/infrastructure/v1/service_server.ts:      path: "/api/infrastructure/v1/list-service-statuses",
+frontend/src/generated/server/worldmonitor/infrastructure/v1/service_server.ts:      path: "/api/infrastructure/v1/get-temporal-baseline",
+frontend/src/generated/server/worldmonitor/infrastructure/v1/service_server.ts:      path: "/api/infrastructure/v1/record-baseline-snapshot",
+frontend/src/generated/server/worldmonitor/infrastructure/v1/service_server.ts:      path: "/api/infrastructure/v1/get-cable-health",
+frontend/src/generated/server/worldmonitor/conflict/v1/service_server.ts:      path: "/api/conflict/v1/list-acled-events",
+frontend/src/generated/server/worldmonitor/conflict/v1/service_server.ts:      path: "/api/conflict/v1/list-ucdp-events",
+frontend/src/generated/server/worldmonitor/conflict/v1/service_server.ts:      path: "/api/conflict/v1/get-humanitarian-summary",
+frontend/src/generated/server/worldmonitor/wildfire/v1/service_server.ts:      path: "/api/wildfire/v1/list-fire-detections",
+frontend/src/generated/server/worldmonitor/market/v1/service_server.ts:      path: "/api/market/v1/list-market-quotes",
+frontend/src/generated/server/worldmonitor/market/v1/service_server.ts:      path: "/api/market/v1/list-crypto-quotes",
+frontend/src/generated/server/worldmonitor/market/v1/service_server.ts:      path: "/api/market/v1/list-commodity-quotes",
+frontend/src/generated/server/worldmonitor/market/v1/service_server.ts:      path: "/api/market/v1/get-sector-summary",
+frontend/src/generated/server/worldmonitor/market/v1/service_server.ts:      path: "/api/market/v1/list-stablecoin-markets",
+frontend/src/generated/server/worldmonitor/market/v1/service_server.ts:      path: "/api/market/v1/list-etf-flows",
+frontend/src/generated/server/worldmonitor/market/v1/service_server.ts:      path: "/api/market/v1/get-country-stock-index",
+frontend/src/generated/server/worldmonitor/cyber/v1/service_server.ts:      path: "/api/cyber/v1/list-cyber-threats",
+frontend/src/generated/server/worldmonitor/intelligence/v1/service_server.ts:      path: "/api/intelligence/v1/get-risk-scores",
+frontend/src/generated/server/worldmonitor/intelligence/v1/service_server.ts:      path: "/api/intelligence/v1/get-pizzint-status",
+frontend/src/generated/server/worldmonitor/intelligence/v1/service_server.ts:      path: "/api/intelligence/v1/classify-event",
+frontend/src/generated/server/worldmonitor/intelligence/v1/service_server.ts:      path: "/api/intelligence/v1/get-country-intel-brief",
+frontend/src/generated/server/worldmonitor/intelligence/v1/service_server.ts:      path: "/api/intelligence/v1/search-gdelt-documents",
+frontend/src/generated/server/worldmonitor/seismology/v1/service_server.ts:      path: "/api/seismology/v1/list-earthquakes",
+frontend/src/generated/server/worldmonitor/aviation/v1/service_server.ts:      path: "/api/aviation/v1/list-airport-delays",
+frontend/src/generated/server/worldmonitor/displacement/v1/service_server.ts:      path: "/api/displacement/v1/get-displacement-summary",
+frontend/src/generated/server/worldmonitor/displacement/v1/service_server.ts:      path: "/api/displacement/v1/get-population-exposure",
+frontend/src/services/wingbits.ts: * instead of the legacy /api/wingbits proxy.
+frontend/src/services/story-share.ts:  return `https://worldmonitor.app/api/story?${params.toString()}`;
+frontend/src/services/runtime-config.ts:const SIDECAR_ENV_UPDATE_URL = 'http://127.0.0.1:46123/api/local-env-update';
+frontend/src/services/runtime-config.ts:const SIDECAR_SECRET_VALIDATE_URL = 'http://127.0.0.1:46123/api/local-validate-secret';
+frontend/src/services/meta-tags.ts:  const storyUrl = `${BASE_URL}/api/story?c=${countryCode}&t=${type}`;
+frontend/src/services/meta-tags.ts:  let imageUrl = `${BASE_URL}/api/og-story?c=${countryCode}&t=${type}`;
+frontend/src/services/prediction/index.ts:  return fetch(`https://worldmonitor.app/api/polymarket?${proxyQs}`);
+frontend/src/services/usa-spending.ts:const API_BASE = 'https://api.usaspending.gov/api/v2';
+frontend/src/services/infrastructure/index.ts: *   - ServiceStatusPanel's direct /api/service-status fetch
+frontend/src/services/infrastructure/index.ts:// Service Statuses -- replaces direct /api/service-status fetch
+frontend/src/services/summarization.ts:// ── Sebuf client (replaces direct fetch to /api/{provider}-summarize) ──
+frontend/src/services/eonet.ts:const EONET_API_URL = 'https://eonet.gsfc.nasa.gov/api/v3/events';
+frontend/src/services/runtime.ts:  // `/api/local-*` prefix so cloud fallback is automatically blocked.
+frontend/src/services/runtime.ts:  return target.startsWith('/api/local-');
+frontend/src/services/runtime.ts:  return target.startsWith('/api/register-interest');
+frontend/src/services/runtime.ts:    if (!target?.startsWith('/api/')) {
+frontend/src/services/gdacs.ts:const GDACS_API = 'https://www.gdacs.org/gdacsapi/api/events/geteventlist/MAP';
+frontend/src/services/live-news.ts:    const res = await fetch(`${baseUrl}/api/youtube/live?channel=${encodeURIComponent(channelHandle)}`);
+frontend/src/services/desktop-readiness.ts:    apiRoutes: ['/api/youtube/live'],
+frontend/src/services/desktop-readiness.ts:    apiRoutes: ['/api/risk-scores'],
+frontend/src/services/desktop-readiness.ts:    apiRoutes: ['/api/conflict/v1/list-acled-events', '/api/infrastructure/v1/list-internet-outages', '/api/cyber/v1/list-cyber-threats', '/api/maritime/v1/get-vessel-snapshot', '/api/military/v1/list-military-flights'],
+frontend/src/services/desktop-readiness.ts:    apiRoutes: ['/api/news/v1/summarize-article'],
+frontend/src/services/desktop-readiness.ts:    apiRoutes: ['/api/market/v1/list-crypto-quotes', '/api/market/v1/list-stablecoin-markets', '/api/market/v1/list-etf-flows'],
+frontend/src/services/desktop-readiness.ts:    apiRoutes: ['/api/military/v1/get-aircraft-details', '/api/military/v1/get-aircraft-details-batch', '/api/military/v1/get-wingbits-status'],
+frontend/src/services/desktop-readiness.ts:    apiRoutes: ['/api/military/v1/list-military-flights'],

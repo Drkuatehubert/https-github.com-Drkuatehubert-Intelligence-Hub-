@@ -1,0 +1,2 @@
+gamma-irradiators-raw.json
+gamma-irradiators.json

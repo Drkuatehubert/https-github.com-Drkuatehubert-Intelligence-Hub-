@@ -1,0 +1,16 @@
+{
+	"regions": [
+		{"id": "africa", "name": "Africa", "data": "geodata/africa.json"},
+		{"id": "europe", "name": "Europe", "data": "geodata/europe.json"},
+		{"id": "asia", "name": "Asia", "data": "geodata/asia.json"},
+		{"id": "middleeast", "name": "Middle East", "data": "geodata/middleeast.json"},
+		{"id": "americas", "name": "Americas", "data": "geodata/americas.json"},
+		{"id": "caribbean", "name": "Caribbean", "data": "geodata/caribbean.json"},
+		{"id": "pacific", "name": "Pacific Islands", "data": "geodata/pacific.json"},
+		{"id": "oceania", "name": "Oceania", "data": "geodata/oceania.json"}
+	],
+	"infrastructure": [
+		{"id": "cables", "name": "Undersea Cables", "data": "geodata/cables.json"},
+		{"id": "pipelines", "name": "Pipelines", "data": "geodata/pipelines.json"}
+	]
+}
