@@ -23,28 +23,30 @@ The Intelligence Hub provides a unified platform for real-time situational aware
 *   **Storage**: PostgreSQL with `pgvector` for memory, Redis for caching.
 *   **Deployment**: Docker Compose for easy scaling and isolation.
 
-## 🛠️ Getting Started
+## 🚀 Quick Start (For Everyone)
 
-Follow these steps to deploy your local Intelligence Hub:
+The Intelligence Hub is designed to be launched with **one click**. No coding knowledge required.
 
-### 1. Repository Setup
-```bash
-git clone https://github.com/your-repo/intelligence-hub.git
-cd intelligence-hub
-```
+### 1. Requirements
+- Install **Docker Desktop**: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 
-### 2. Environment Configuration
-Copy the template and fill in your API keys (Wigle, OpenSky, Groq, etc.):
-```bash
-cp .env.example .env
-```
+### 2. Launch the Hub
+- **Windows**: Double-click on `start.bat`
+- **Linux/Mac**: Run `bash start.sh` in your terminal
 
-### 3. Launch via Docker (Recommended)
-This will start the Go backend, React frontend, PostgreSQL (pgvector), Redis, and Ollama:
+*The platform will be ready in a few minutes at **`http://localhost:3000`**.*
+
+---
+
+## 🛠️ Advanced Setup
+
+### 1. Environment Configuration
+The project comes pre-configured with essential API keys in the `.env` file (Wigle, Gemini, Grok, OpenSky, Groq, OpenAI). You can edit this file to add your own keys or modify settings.
+
+### 2. Manual Launch via Docker
 ```bash
 docker-compose up --build
 ```
-*The dashboard will be available at `http://localhost:3000`.*
 
 ### 4. Manual Launch (Development)
 If you prefer running without Docker:

@@ -2,39 +2,53 @@ services:
   db:
     image: pgvector/pgvector:pg16
     environment:
-      POSTGRES_USER: pentagi
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: pentagi
+      POSTGRES_USER: ${DB_USER:-pentagi}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+      POSTGRES_DB: ${DB_NAME:-pentagi}
     ports:
       - "5432:5432"
     volumes:
       - pentagi_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pentagi"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   redis:
     image: redis:7-alpine
     ports:
       - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    env_file:
+      - .env
     environment:
-      DATABASE_URL: postgres://pentagi:password@db:5432/pentagi?sslmode=disable
+      DATABASE_URL: postgres://${DB_USER:-pentagi}:${DB_PASSWORD:-password}@db:5432/${DB_NAME:-pentagi}?sslmode=disable
       REDIS_URL: redis://redis:6379
       OLLAMA_HOST: http://ollama:11434
     ports:
       - "8080:8080"
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3000:80"
     depends_on:
       - backend
 
