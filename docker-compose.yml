@@ -1,0 +1,50 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: pentagi
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pentagi
+    ports:
+      - "5432:5432"
+    volumes:
+      - pentagi_db_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgres://pentagi:password@db:5432/pentagi?sslmode=disable
+      REDIS_URL: redis://redis:6379
+      OLLAMA_HOST: http://ollama:11434
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - redis
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  pentagi_db_data:
+  ollama_data:
