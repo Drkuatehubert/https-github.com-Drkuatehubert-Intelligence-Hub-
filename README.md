@@ -1,1 +1,1 @@
-# https-github.com-Drkuatehubert-Intelligence-Hub-
+# Intelligence-Hub-
